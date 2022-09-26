@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<!-- Tags
+  -HTML tags are like keywords which defines that how web browser will format
+  and display the content.
+  -All HTML tags must enclosed within < > these brackets.
+  -Every tag in HTML perform different tasks.
+  -If you have used an open tag <tag>, then you must use a close tag </tag>
+  (except some tags).
+-->
+
+<!-- Attributes
+  -HTML attributes are special words which provide additional information.
+  -Each element or tag can have attributes, which defines the behaviour of that
+  element.
+  -The attributes name and values are case sensitive.
+  -Syntax: <element attribute_name="value">content</element>
+-->
+
+
+
+
+<!-- Head: contain information about the web page -->
+
+<head>
+  <!-- meta: specify things like character sets, page descriptions, and
+  keywords for search engines -->
+  <meta charset="utf-8">
+  <!-- link: add style sheets and favicons to your page -->
+  <link rel="stylesheet" href="/css/master.css">
+  <!-- title of the page displayed in the browser’s title bar -->
+  <title>HTML Personal Notes</title>
+</head>
+
+
+
+
+<!-- Body: element contains all the content of your web page -->
+
+<body>
+
+  <!-- Title or a subtitle which you want to display on the webpage -->
+  <h1>This is a Heading 1</h1>
+  <h2>This is a Heading 2</h2>
+  <h3>This is a Heading 3</h3>
+  <h6>Smallest Heading 6</h6>
+
+
+  <!-- Paragraphs -->
+  <p>
+    This is a paragraph
+    <!-- Strong semantics -->
+    <strong>This is phrase example</strong>
+    <!-- Emphasized semantics -->
+    <em>This is another phrase example</em>
+  </p>
+  <!-- Paragraphs can be styled -->
+  <!-- style: attribute to define style properties-->
+  <p style="height: 50px; color: blue">This is a styled paragraph</p>
+
+
+  <!-- Lists -->
+  <!-- Ordered Lists: numbered list (it can be changed with CSS) -->
+  <ol>
+    <li>First Item</li>
+    <li>Second Item</li>
+    <li>Third Item</li>
+  </ol>
+  <!-- Unordered lists: bullet-pointed list -->
+  <ul>
+    <li>Some item</li>
+    <li>Some other item</li>
+    <li>Third bullet point</li>
+  </ul>
+  <!-- Nested Lists: nest a list inside another list -->
+  <ol>
+    <li>Item One</li>
+    <li>Item Two</li>
+    <ul>
+      <li>I'm nested inside</li>
+      <li>Also nested!</li>
+      <ol>
+        <li>Woah! <strong>Really nested!</strong></li>
+      </ol>
+    </ul>
+  </ol>
+
+
+  <!-- div tag: generic block-levelcontainer to group elements together -->
+  <!-- span tag: generic in-line container -->
+  <div class="">
+    <h1>Some Header that I want to group with</h1>
+    <p>
+      Some text that I want to be grouped with the header above!
+      You can use a span: <span> inside of the span</span>
+    </p>
+  </div>
+
+
+  <!-- Images -->
+  <!-- alt: attribute that specifies an alternate text for an image -->
+  <img src="django.png" alt="">
+  <img src="missing.png" alt="Uh oh! Missing Picture File">
+
+
+  <!--  Links -->
+  <!--  href: set link to be open (a file, an address, etc) -->
+  <a href="htmlBasicsTwo.html">Link to another HTML file</a>
+  <a href="https://www.google.com">Link to Google!</a>
+
+
+  <!-- Tables -->
+  <!-- border: attribute that sets border width -->
+  <table border="1">
+    <!-- table header -->
+    <thead>
+      <!-- th is a column of the table header -->
+      <th>Number</th>
+      <th>Color</th>
+      <th>Country</th>
+    </thead>
+    <!--  tr is a table row -->
+    <tr>
+      <!-- td is a table table cell -->
+    <tr>
+      <td>United Kingdom</td>
+      <!-- We can insert pictures inside a table cell-->
+      <td><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/200px-Flag_of_the_United_Kingdom.svg.png" alt=""></td>
+      <td>2,649,890</td>
+    </tr>
+  </table>
+
+
+  <!-- Forms: used to collect user input -->
+  <!-- Forms has the following properties:
+    -input      -> set inputs
+    -label      -> define a label for many form elements
+    -attributes -> attributes to be used
+  -->
+
+  <!-- Form element: inputs
+    -Types:
+      -email    ->  email address input field
+      -password -> one-line password input field
+      -text     -> one-line text input field
+      -file     -> select the file from device storage
+      -image    -> select a graphical submit button
+      -radio    -> displays a radio button (for selecting one of many choices)
+      -checkbox -> displays a checkbox (for selecting zero or more choices)
+      -submit   -> displays a submit button (for submitting the form)
+      -button   -> displays a clickable button
+    -Attributes:
+      -value        -> initial value for an input field
+      -readonly     -> input field is read-only
+      -placeholder  -> short a hint that describes the expected value
+      -required     -> input field must be filled out before submitting
+      -autocomplete -> whether a form or input field should have autocomplete
+  -->
+
+  <!-- Form element: labels
+    -Define a label for several form elements.
+    -The for attribute tag should be equal to the id attribute of the input
+    element to bind them together.
+  -->
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname">
+
+  <!--Form element: select
+    -Define a drop-down list
+    -Use size to specify the number of visible values
+    -Use multiple to allow multiple selection
+  -->
+  <label for="cars">Choose a car:</label>
+  <select id="cars" name="cars" size="4" multiple>
+    <option value="volvo">Volvo</option>
+    <option value="saab">Saab</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>
+
+  <!-- Form element: textarea
+    -Define a multi-line input field
+    -Set rows and cols to increase/decrease size
+  -->
+  <textarea name="message" rows="10" cols="30">The cat was playing
+      in the garden.</textarea>
+
+  <!-- Form element: button
+    -Define a clickable button
+    -Set onclick element to display an alert pop up with a message
+  -->
+  <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+  <!--Form element: attributes
+    -Action: define the action to be performed when the form is
+    submitted (usually, the form data is sent to a file on the server).
+    -Target: specify where to display the response that is received after
+    submitting the form. Types of targets:
+      -_blank    -> the response is displayed in a new window or tab
+      -_self     -> the response is displayed in the current window
+      -_parent   -> the response is displayed in the parent frame
+      -_top      -> the response is displayed in the full body of the window
+      -framename -> the response is displayed in a named iframe
+    -Method attribute: specify the HTTP method to use used when submitting
+    the form data (get of post).
+  -->
+
+  <!-- Form examples -->
+  <form action="http://www.google.com" method="get">
+    <label>
+      EMAIL:
+      <input type="email" name="useremail" value="Email Here">
+    </label>
+    <label>
+      PASSWORD:
+      <input type="password" name="password" placeholder="Password">
+    </label>
+    <label for="userinput">TEXT:</label>
+    <input type="text" id="userinput" name="input" placeholder="Enter Text Here" required>
+    <input type="submit">
+  </form>
+
+  <form method="get">
+    <h3>Are you from inside the USA? Or outside?</h3>
+    <label for="inside">Location:</label>
+    <input type="radio" id="inside" name="loc_choice" value="">
+    <label for="outside">Outside:</label>
+    <input type="radio" id="outside" name="loc_choice" value="out">
+    <p>How was your service? (3 being the best)</p>
+    <select name="stars">
+      <option value="Great">3</option>
+      <option value="Okay">2</option>
+      <option value="Bad">1</option>
+    </select>
+    <p>Any other Feedback?</p>
+    <textarea name="name" rows="8" cols="80"></textarea>
+    <input type="submit" name="" value="Submit Feedback">
+  </form>
+
+  <form action="/action_page.php" autocomplete="on">
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" autocomplete="off"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+
+
+</body>
+
+</html>

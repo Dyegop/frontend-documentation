@@ -1,0 +1,94 @@
+/*
+General css structure:
+  -Selected HTML Tag {
+    property: value;
+}
+
+Colors can be names, or codes(rgb, hex, rgba)
+
+Select css tags
+	.class -> select all classes named "class"
+	#id    -> select id named "id"
+*/
+
+body{
+  /*Background-color: */
+  /*background: gray;*/
+  /*Background image from url*/
+  background: url('C:\\Users\\ponce\\Pictures\\Saved Pictures\\One Piece 2.jpg');
+  /*Set background repetition pattern for our image*/
+  background-repeat:repeat;
+}
+
+h1 {
+  /* Color everything inside the tag*/
+  color: black;
+}
+
+h4 {
+  color: rgba(13, 90, 140, 0.5)
+}
+
+li {
+  color: rgb(0, 200, 0);
+}
+
+p {
+  color: #000000;
+}
+
+.firstDiv{
+  background: grey;
+  border: black;
+  border-width: medium;
+  border-style: dashed;
+}
+
+.secondDiv{
+    background-color: gray;
+    border: black;
+    border-width: medium;
+    border-style: dashed;
+}
+
+span{
+  background: #BD3834;
+  color: black;
+}
+
+/*Use an id to single out html elements*/
+/*id selectors use a hashtag # */
+#singledout{
+  color: red;
+  text-decoration: underline;
+}
+
+/*Use an asterisk to select all elements
+*{
+  color: green;
+}
+*/
+
+/*Adjacent sibling: Elements that are next to each other*/
+h3 + ul{
+  border: 3px dotted purple;
+}
+
+/*Descendants*/
+li a{
+  color: black;
+}
+
+/*Attributes*/
+li a[href="www.npr.org"]{
+  color: red;
+  border: 5px solid orange;
+}
+
+/*Specificity
+id > class > tag
+
+Check these links for more information:
+https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+https://designshack.net/articles/css/what-the-heck-is-css-specificity/
+*/
